@@ -7,7 +7,7 @@ import org.springframework.web.service.invoker.HttpServiceProxyFactory;
 
 public class CartClientAutoConfiguration {
     @Bean
-    public CartClient customerClient(CartClientConfig config) {
+    public CartClient cartClient(CartClientConfig config) {
         WebClient webClient = WebClient.builder()
                 .baseUrl(config.getBaseUrl())
                 .build();
